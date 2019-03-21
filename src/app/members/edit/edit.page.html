@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form  #form="ngForm" (ngSubmit)="saveAbout()">
+    <div padding>
+      <ion-item>
+        <ion-input  name="about" type="text" placeholder="About" [(ngModel)]="about" required></ion-input>
+      </ion-item>
+    </div>
+    <div padding>
+      <ion-button  type="submit" expand="block">Save</ion-button>
+    </div>
+  </form>
+
+  <form  #form="ngForm" (ngSubmit)="saveContact()">
+    <div padding>
+      <ion-item>
+        <ion-input  name="contact" type="text" placeholder="Contact" [(ngModel)]="contact" required></ion-input>
+      </ion-item>
+    </div>
+    <div padding>
+      <ion-button  type="submit" expand="block">Save</ion-button>
+    </div>
+  </form>
+
+  <form  #form="ngForm" (ngSubmit)="saveExperience()">
+    <div padding>
+      <ion-item>
+        <ion-input  name="experienceTitle" type="text" placeholder="Experience Title" [(ngModel)]="expTitle" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input  name="experience" type="text" placeholder="Experience" [(ngModel)]="experience" required></ion-input>
+      </ion-item>
+    </div>
+    <div padding>
+      <ion-button  type="submit" expand="block">Save</ion-button>
+    </div>
+  </form>
+
+  <form  #form="ngForm" (ngSubmit)="saveFormation()">
+    <div padding>
+      <ion-item>
+        <ion-input  name="formationTitle" type="text" placeholder="Formation Title" [(ngModel)]="formTitle" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input  name="formation" type="text" placeholder="Formation" [(ngModel)]="formation" required></ion-input>
+      </ion-item>
+    </div>
+    <div padding>
+      <ion-button  type="submit" expand="block">Save</ion-button>
+    </div>
+  </form>
+</ion-content>

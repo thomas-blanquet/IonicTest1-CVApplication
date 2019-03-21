@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Formation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>My formation</ion-list-header>
+    <ion-card *ngFor ="let form of this.formation">
+        <ion-card-header>
+          <ion-card-title>{{form.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{form.description}}</ion-card-content>
+      </ion-card>
+  </ion-list>
+</ion-content>

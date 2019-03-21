@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Experiences</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>My experiences</ion-list-header>
+    <ion-card *ngFor ="let experience of this.experiences">
+        <ion-card-header>
+          <ion-card-title>{{experience.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{experience.description}}</ion-card-content>
+      </ion-card>
+  </ion-list>
+</ion-content>
